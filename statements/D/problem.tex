@@ -1,0 +1,42 @@
+\begin{problem}{Zhuangba loves Biology}{standard input}{standard output}{1 second}{512 megabytes}
+
+Zhuangba 在新高考的“五选一”中选了生物作为自己高考选考的第三门并且即将就读北京大学生物专业（大雾。
+
+DNA携带有合成RNA和蛋白质所必需的遗传信息，是生物体发育和正常运作必不可少的生物大分子。DNA是由脱氧核苷酸组成的大分子聚合物。脱氧核苷酸由碱基、脱氧核糖和磷酸构成。其中碱基有4种：腺嘌呤（A）、鸟嘌呤（G）、胸腺嘧啶（T）和胞嘧啶（C）。
+
+美少女 Zhuangba 在学习过程中将一条多脱氧核苷酸链视为一个字符串 $s_1s_2s_3\cdots s_{n-1}s_n$。
+
+现在 Zhuangba 想到两个有趣的操作：
+
+\begin{itemize}
+\item 操作一：把最左边字符的移动到最右边，原来的串变成了$s_2s_3\cdots s_{n-1}s_ns_1$
+\item 操作二：把最右边字符的移动到最左边，原来的串变成了$s_ns_1s_2s_3\cdots s_{n-1}$
+\end{itemize}
+
+当多脱氧核苷酸链 $t$ 进行操作一后生成的串与进行操作二后生成的串一摸一样，则认为多脱氧核苷酸链 $t$ 是 "Beautiful DNA"。
+
+Zhuangba 很快就知道把一个多脱氧核苷酸链进行删减剪辑，到最后总能使得该链成为 "Beautiful DNA"。而且，聪明的Zhuangba很快计算出了最少需要删减的碱基的数量。
+
+\InputFile
+
+第一行输入测试数据数量 $t(1\le t \le 1000)$。 
+
+接下来 $t$ 行，每一行输入一个多脱氧核苷酸链 $S$，S的长度小于等于$2\times 10^{6}$。
+
+
+\OutputFile
+
+输出 $t$ 行，每一行输出使得该链成为"Beautiful DNA"的最少需要删减的碱基的数量。
+
+\Example
+\begin{example}
+\exmpfile{example.1.in}{example.1.ans}%
+\end{example}
+
+\Notes
+
+数据确保多脱氧核苷酸链只由 $\mathcal {A，C，G，T}$ 构成。
+
+数据确保输入多脱氧核苷酸链总长度小于等于 $2\times 10^6$
+
+\end{problem}

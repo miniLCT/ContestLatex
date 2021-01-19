@@ -1,0 +1,29 @@
+\begin{problem}{Arithmetic Sequence }{standard input}{standard output}{1 second}{256 megabytes}
+
+    A Sequence is a set of one or more things (usually numbers) that are in order. Each number in the sequence is called a term.
+
+    In an Arithmetic Sequence the difference between one term and the next is a constant. In other words, we just add the same value each time ... infinitely.
+    
+    In General we could write an arithmetic sequence like this: ${a, a+d, a+2d, a+3d, ... }$ where $a$ is the first term, and $d$ is the difference between the terms (called the \textsl{common difference})
+    
+    To sum up the terms of this arithmetic sequence: ${a + (a+d) + (a+2d) + (a+3d) + ...}$ Use this formula: $S=\sum_{k=0}^{n-1}(a+kd)=\frac{2a+(n-1)d}{2}$
+    
+    Now you are given a number $S$, print an arithmetic sequence of \textbf{integers} whose sum is equal to $S$.
+
+\InputFile
+
+The test case only contains an integer $S(-2^{31}\le S \le 2^{31}-1)$, represents the sum of an arithmetic sequence.
+% The test case only contains an integer $(-2^{31}\le S \le 2^{31}-1)$, represents the sum of an arithmetic sequence.
+
+\OutputFile
+
+An arithmetic sequence \textbf{of integers} whose sum is equal to $S$. Separate each number with a space.
+
+\Example
+
+\begin{example}
+\exmpfile{example.1.in}{example.1.ans}%
+\exmpfile{ex2.in}{ex2.ans}%
+\end{example}
+
+\end{problem}

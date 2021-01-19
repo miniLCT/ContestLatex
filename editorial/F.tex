@@ -1,0 +1,93 @@
+\renewcommand{\problemname}{F. Plant tree?}
+
+\begin{frame}\frametitle{\problemname}
+
+    \begin{block}{题意}
+        种树获得快乐值，快乐值是严格递增的。且满足一些限制。
+		\begin{itemize}
+			\item[$\cdot$] 保证相邻两项差值 $\le Y$
+			\item[$\cdot$] 保证最大的快乐值 $\le Z$
+		\end{itemize}
+		求可能的方案数。
+    \end{block}
+
+    \pause
+
+注意到及其鬼畜的数据范围。
+
+\end{frame}
+
+\begin{frame}\frametitle{\problemname}
+	
+	\begin{block}{题解}
+		{
+			\small
+		把方案数想成是数组滑动一样的东西，感性的理解一下。
+
+		这样理解之后好像没有怎么用。。
+
+		连续X天，差值最大为Y，最大值为Z
+
+        不妨令第 $i$ 天与第 $i+1$ 的差值为 $a_i$	
+
+		$$ans=\sum_{a_1=1}^Y\sum_{a_2=1}^Y\cdots\sum_{a_{X-1}=1}^Y(Z-a_1-a_2\cdots-a_{X-1})$$
+		对于 $Z$ 部分求和就是
+		$$Z\cdot Y^{X-1}$$
+		接下来考虑后面的部分
+		$$
+		\begin{aligned}
+		right&=\sum_{a_1=1}^Y\sum_{a_2=1}^Y\cdots\sum_{a_{X-1}=1}^Y(a_1+a_2\cdots+a_{X-1})\\
+		\end{aligned}
+		$$
+		}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}\frametitle{\problemname}
+	
+	\begin{block}{F. Plant tree?}
+		{
+			\small
+		考虑每个数的贡献：该数的每个取值对应贡献是 $Y^{X-2}$.
+		于是有：
+		{
+			\tiny
+		$$
+		\begin{aligned}
+		right1&=\sum_{a_1=1}^Y\sum_{a_2=1}^Y\cdots\sum_{a_{X-1}=1}^Y(a_1+a_2\cdots+a_{X-1})\\
+		&=\sum_{i=1}^Y Y^{X-2}\\
+		&=\frac{(Y+1)\cdot Y^{X-1}}{2}
+		\end{aligned}
+		$$
+		}
+		所以，总和就是
+		{
+			\tiny
+		$$
+		right=(X-1)\cdot right1=\frac{(X-1)\cdot(Y+1)\cdot Y^{X-1}}{2}
+		$$
+		}
+		最后，合并一下答案
+		{
+			\tiny
+		$$
+		\begin{aligned}
+		ans&=Z\cdot Y^{X-1}-\frac{(Y+1)\cdot Y^{X-1}}{2}\\
+		&=\frac{Y^{X-1}\cdot(2\cdot Z-(X-1)(Y+1)) }{2}
+		\end{aligned}
+		$$	
+		}
+		}
+	\end{block}
+
+\end{frame}
+\begin{frame}\frametitle{\problemname}
+\begin{block}{花絮}
+		这道题在今天9点左右被提出有问题，原因是我没有添加这样的条件 $(X-1)\times Y \le Z$。这样的话以上所有的式子都是不成立的。于是某个出题人建议把 $Z$ 的范围改成大于 1e12 ，于是有了现在这么鬼畜的数据范围。
+	\end{block}
+		
+\end{frame}
+
+
+

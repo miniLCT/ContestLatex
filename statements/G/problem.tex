@@ -1,0 +1,33 @@
+\begin{problem}{Zhuangba and sequence}{standard input}{standard output}{1 second}{512 megabytes}
+
+余光中先生在《绝色》里写道：
+    
+“若逢新雪初霁，满月当空，下面平铺着皓影，上面流转着亮银，而你带笑地向我走来月色与雪色之间，你是第三种绝色。”
+    
+我没有余先生细腻的笔法，也没有那样的文学技巧写出那样的文字。    
+    
+只好忠于自己的感觉来普通地表达在我心里的感受。
+        
+我也没见过那样的满月，更没见过那样的你。
+
+Zhuangba 有一个正整数序列 $S$。
+
+Zhuangba 想知道能不能找到 $S$ 的子序列 $S_l \ S_{l+1}\cdots S_r$，使得 $gcd(S_l,S_{l+1},\cdots S_r)\times (S_l \oplus S_{l+1} \oplus \cdots \oplus S_{r}) = k$。
+
+\InputFile
+
+第一行两个整数，序列长度 $n(1\le n \le 10^5)$, 正整数 $k(1 \le k \le 10^{18})$。
+
+第二行输入 $n$ 个正整数，表示序列$S_1，S_2，\cdots S_n$。
+\OutputFile
+
+如果有很多解，输出两个字典序最小的 $ l ，\ r$ ，如果没解，输出 "No Solution"。
+
+\Example
+
+\begin{example}
+\exmpfile{example.1.in}{example.1.ans}%
+\exmpfile{example.2.in}{example.2.ans}%
+\end{example}
+
+\end{problem}

@@ -1,0 +1,17 @@
+\renewcommand{\problemname}{M. 喷射战士}
+
+\begin{frame}\frametitle{\problemname}
+	
+	\begin{block}{题意}
+		两人轮流在格子图中以空白点为中心画十字，问最后谁画的格子数最多。
+	\end{block}
+\end{frame}
+
+\begin{frame}\frametitle{\problemname}
+	
+	\begin{block}{题解}
+		签到
+		
+		我们先考虑总共拿了偶数次，那么对于后手 $lct$ 来说，先手 $trx$ 在上一次画十字时一定占满了一行一列，那么 $lct$ 这次拿			的情况只能比先手 $trx$ 少	两个格子（重叠），因此后手每次都少两个格子。那么对于拿了奇数次来说，最后一次一定是 $trx$ 				拿，因此 $lct$ 更不可能比 $trx$ 多，输出 $trxnb$ 即可。
+	\end{block}
+\end{frame}
