@@ -1,0 +1,25 @@
+\renewcommand{\problemname}{K. Farmer's hedge.}
+
+
+\begin{frame}\frametitle{\problemname}
+	
+	\begin{block}{题解}
+		- 分形, 可以用递归解决, 下面展示解决办法之一
+
+		  1. 递归到位置$(x, y)$后继续在$(x, y), (x + \omega, y), (x + \omega, y + \omega)$ 三个位置进行继续递归, 其中$\omega$取决于递归层数, 与每个人的程序有关
+
+		  2. 递归到最深层打印 `*` 或你所设定的其他图形即可
+
+	\end{block}
+
+	\begin{block}{另一种解法}
+		- 另一位出题人偶然发现了更高效的\href{https://www.luogu.com.cn/blog/EntropyIncreaser/xie-er-bin-si-ji-san-jiao-xing-hu-wei-yun-suan}{\textcolor{blue}{\uline{终极非递归解决方法}}}
+		\text{\ttfamily for (int i = 0; i < (1 << n); printf("$\backslash$n"), i++)}
+
+		\text{\ttfamily \quad for (int j = 0; j <= i; j++)}
+			
+		\text{\ttfamily \qquad printf("\%c", (i \& j) == j ? '*' : ' ');}
+
+		        
+	\end{block}
+\end{frame}

@@ -1,0 +1,149 @@
+\setlength{\parskip}{0.5\baselineskip}
+
+\begin{document}
+\title{2020 CUSTPC}
+\author{Editorial}
+\date{May. 24th, 2020} 
+
+\newcommand{\problemname}{A}
+
+\begin{frame}
+\titlepage
+
+\end{frame}
+
+\makeatletter
+\newcommand\resetstackedplots{
+\makeatletter
+\pgfplots@stacked@isfirstplottrue
+\makeatother
+\addplot [forget plot,draw=none,x=P,y=z] coordinates{\problemdata};
+}
+\makeatother
+
+\begin{frame}\frametitle{比赛小结}
+
+\begin{itemize}
+\item[$\cdot$] 本次比赛共有 302 名校内选手， 121 名校外选手报名参加。
+\item[$\cdot$] 本次比赛共收到 0 份提交代码。
+\item[$\cdot$] 0 名参赛选手有提交记录。
+\item[$\cdot$] 0 名参赛选手至少通过一题。
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{难度预期与实际情况}
+
+预期：
+\begin{itemize}
+\item[$\cdot$] super easy: H,M
+\item[$\cdot$] easy: D,E,I,J,K
+\item[$\cdot$] medium easy: A,B,G,J
+\item[$\cdot$] medium: C,F
+\end{itemize}
+实际：
+\begin{itemize}
+\item[$\cdot$] super easy:  
+\item[$\cdot$] easy:
+\item[$\cdot$] medium easy:
+\item[$\cdot$] medium:
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{封榜前}
+    \include{data_fengbangqian}
+    \begin{tikzpicture}
+	\pgfplotsset{                ybar stacked,
+		y axis line style = { opacity = 0 },
+		% axis x line       = none,
+		width=\textwidth,
+		height=.8\textheight,
+		legend style={at={(0.5,1)},
+			anchor=south,legend columns=-1},
+		symbolic x coords={A,B,C,D,E,F,G,H,I,J,K,L,M},
+		xtick=data,
+		ymajorgrids=true,
+		yminorgrids=true,
+		xmajorgrids=false,
+		xminorgrids=false,
+		xminorticks=false,
+		minor y tick num=3,
+		xtick style={draw=none},
+		ymin=0,ymax=1600,
+		ylabel={\# of submissions},
+		grid style=dashed,}
+	
+		\begin{axis}[bar shift=3pt,bar width=6pt,legend style = {at={(0.3,1)},anchor=south west}]
+		\addplot [fill={rgb,255:red,156; green,255; blue,87}] table [x=P,y=AC]{\subdata};
+		\addplot [fill={rgb,255:red,255; green,0; blue,0}] table [x=P,y=NP]{\subdata};
+		\addplot [fill={rgb,255:red,100; green,193; blue,255}] table [x=P,y=DN]{\subdata};
+		\legend{通过,未通过,等待揭晓}
+		\end{axis}
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}\frametitle{总榜}
+    \include{data_zongbang}
+    \begin{tikzpicture}
+	\pgfplotsset{                ybar stacked,
+		y axis line style = { opacity = 0 },
+		% axis x line       = none,
+		width=\textwidth,
+		height=.8\textheight,
+		legend style={at={(0.5,1)},
+			anchor=south,legend columns=-1},
+		symbolic x coords={A,B,C,D,E,F,G,H,I,J,K,L,M},
+		xtick=data,
+		ymajorgrids=true,
+		yminorgrids=true,
+		xmajorgrids=false,
+		xminorgrids=false,
+		xminorticks=false,
+		minor y tick num=3,
+		xtick style={draw=none},
+		ymin=0,ymax=1600,
+		ylabel={\# of submissions},
+		grid style=dashed,}
+	
+		\begin{axis}[bar shift=3pt,bar width=6pt,legend style = {at={(0.3,1)},anchor=south west}]
+		\addplot [fill={rgb,255:red,156; green,255; blue,87}] table [x=P,y=AC]{\subdata};
+		\addplot [fill={rgb,255:red,255; green,0; blue,0}] table [x=P,y=NP]{\subdata};	
+		\legend{通过,未通过}
+		\end{axis}
+\end{tikzpicture}
+\end{frame}
+
+\include{A}
+
+\include{B}
+
+\include{C}
+
+\include{D}
+
+\include{E}
+
+\include{F}
+
+\include{G}
+
+\include{H}
+
+\include{I}
+
+\include{J}
+
+\include{L}
+
+\include{K}
+
+\include{M}
+
+
+\begin{frame}\frametitle{总结}
+	
+\end{frame}
+
+\end{document}

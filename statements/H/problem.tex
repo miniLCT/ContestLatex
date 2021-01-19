@@ -1,0 +1,22 @@
+\begin{problem}{LONG LONG LONG LONG Winter Vacation}{standard input}{standard output}{1 second}{512 megabytes}
+$Zhuangba$ 是一个非常自律的高三学生，在没有开学的时候也能做到很好的时间管理。由于在浙江首轮高考中取得不错的成绩，她只需要复习语文，数学，英语和强基物理。
+    
+现在假设她有长达 $N$ 天的寒假，每一天她都会复习语文，数学，强基物理中的一门，获得该门学课的成就感（在第 $i$ 天，复习语文获得 $a_i$的成就感，复习数学 $b_i$的成就感，复习英语获得 $c_i$的成就感，复习强基物理获得 $d_i$ 的成就感）。从第二天开始，她复习的内容和昨天的内容是不一样的，即如果第一天复习了数学，那么第二天只能复习语文或英语或强基物理。
+    
+擅长管理时间的 $Zhuangba$ 很快就计算出如何安排能够获得最大成就感。
+\InputFile
+第一行输入寒假的天数 $N(1\le N\le 10^6)$。
+
+接下来 $N$ 行每一行输入仅由空格隔开的四个值$a_i,b_i,c_i,d_i$表示第 $i$ 天复习语文，数学，英语，强基物理所能获得的成就感$(1\le a_i,b_i,c_i,d_i\le 10^5)$。
+
+\OutputFile
+
+输出 $Zhuangba$ 安排获得的最大成就感的值。
+
+\Example
+
+\begin{example}
+\exmpfile{example.1.in}{example.1.ans}%
+\end{example}
+
+\end{problem}

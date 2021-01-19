@@ -1,0 +1,37 @@
+\begin{problem}{Zhuangba and rkmdsxmds}{standard input}{standard output}{2 second}{256 megabytes}
+
+% \includegraphics[width=0.35\textwidth]{ad.png}%
+
+Zhuangba 和 rkmdsxmds 常常会在一起玩游戏。
+
+有一天他们在一起玩“翻格格”的游戏，游戏规则是这样的：
+
+Zhuangba 和 rkmdsxmds 面前有一个二维平面意义下的 $n\times m$ 的格子图，格子被认为有正面反面，刚开始所有的格子都是正面朝上。翻动一个格子后，会把此格子作为中心（它自身也要翻面）带动着这个格子的九宫格（如果相邻格子存在且合法）翻面（即原本正面朝上变为反面朝上，原本反面朝上变为正面朝上）。规定只有所有格子作为中心翻动一次后游戏结束。
+
+当游戏结束后如果反面朝上的数量是偶数个，认为 Zhuangba 获胜，否则 rkmdsxmds 获胜。
+
+Zhuangba 和 rkmdsxmds 都会用最优策略翻格子，请你判断一下是谁获胜了。
+\InputFile
+
+% \includegraphics{fuck.jpg}
+
+第一行一个整数 $t 
+(1\le t \le 1000)$。
+
+接下来 $t$ 行，每行两个整数$n , m (1\le n , m \le 10^5)$
+\OutputFile
+输出 $t$ 行，如果 $Zhuangba$ 获胜，输出"Zhuangba\ txdy"，否则输出"Zhuangba MeiMeiMei"。
+
+\Example
+
+\begin{example}
+\exmpfile{example.1.in}{example.1.ans}%
+\end{example}
+
+% \Notes
+
+% \includegraphics[width=0.80\textwidth]{ad.png}%
+% \includegraphics{fuck.eps}
+
+
+\end{problem}
